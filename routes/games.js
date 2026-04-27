@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
         const games = db.prepare(`
             SELECT id, name, desc, rules, img, route, enabled
             FROM games
-            ORDER BY name
+            ORDER BY id
         `).all();
 
         res.json(games);
