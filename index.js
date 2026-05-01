@@ -14,6 +14,8 @@ require('./db/database');
 // routes
 const gamesRouter = require("./routes/games");
 app.use('/games', gamesRouter);
+const favoritesRouter = require("./routes/favorites");
+app.use('/favorites', favoritesRouter);
 
 // basic health check endpoint
 app.get("/health", (req, res) => {

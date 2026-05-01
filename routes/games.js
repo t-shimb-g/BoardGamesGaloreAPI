@@ -31,7 +31,6 @@ router.get('/:route', (req, res) => {
 
     try {
         const game = getGameByRoute(route);
-        console.log(game);
 
         if (!game) {
             return res.status(404).json({error: `Game not found: ${route}`});
