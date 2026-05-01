@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
         `).all();
 
         res.json(games);
-    } catch(error) {
+    } catch (error) {
         res.status(500).json({error: 'Failed to fetch games'});
     }
 });
@@ -40,7 +40,7 @@ router.get('/:route', (req, res) => {
             return res.status(300).json({error: 'Game not enabled. How did you end up here?'})
         }
         res.json(game);
-    } catch(error) {
+    } catch (error) {
         res.status(500).json({error: `Failed to fetch game: ${route}`});
     }
 });
