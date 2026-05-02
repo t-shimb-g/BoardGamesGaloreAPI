@@ -19,6 +19,7 @@ db.exec(`
     CREATE TABLE IF NOT EXISTS favorite_games (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         game_id INTEGER NOT NULL,
+        UNIQUE (game_id),
         FOREIGN KEY (game_id) REFERENCES games(id)
     );
 `);

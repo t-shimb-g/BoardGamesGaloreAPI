@@ -13,5 +13,6 @@ CREATE TABLE games (
 CREATE TABLE favorite_games (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     game_id INTEGER NOT NULL,
+    UNIQUE (game_id),
     FOREIGN KEY (game_id) REFERENCES games(id)
 );
